@@ -25,7 +25,6 @@ class ArticleController extends Controller
 
     public function addcomment(Request $request, Article $article)
     {
-
         $validator   = Validator::make($request->all(), [
             'subject' => 'required|min:2',
             'body' => 'required|min:2',

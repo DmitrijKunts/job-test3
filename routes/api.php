@@ -22,5 +22,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::name('article.')->group(function () {
     Route::get('/articles/{article:slug}/like', [ArticleController::class, 'like'])->name('like');
     Route::get('/articles/{article:slug}/show', [ArticleController::class, 'show'])->name('show');
-    Route::post('/articles/{article:slug}/addcomment', [ArticleController::class, 'addcomment'])->name('addcomment');
 });
